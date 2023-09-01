@@ -1,0 +1,165 @@
+/* Общие стили для чата */
+.App {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: #4983ad;
+    /* Задаем синий фон для всей страницы */
+}
+
+body {
+    margin: 0;
+}
+
+.ChatRoom {
+    width: 66%;
+    height: 100%;
+    background-color: rgb(239, 237, 253);
+    /*Устанавливаем бежевый фон для чат-комнаты*/
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+
+
+.MessageList {
+    /* background-color: #e5ddd5; */
+    /* светлый фон, похожий на фон Telegram */
+    padding: 10px 15px;
+    height: 100%;
+    overflow-y: auto;
+    
+    display: flex;
+    flex-direction: column; /* Элементы будут выстраиваться вертикально */
+}
+
+.Message {
+    padding: 8px 16px;
+    margin-bottom: 10px;
+    border-radius: 20px; /* Закруглённые углы, как у сообщений в Telegram */
+    max-width: 60%; /* Чтобы сообщения не занимали всю ширину экрана */
+    word-wrap: break-word; /* Перенос строк в сообщении */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для сообщений */
+}
+
+.Sent {
+    background-color: #2c90bb;
+    color: white;
+    align-self: flex-end;
+}
+
+.Received {
+    background-color: #f4f4f4;
+    color: black;
+    align-self: flex-start;
+}
+
+
+
+
+.SendMessageForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    /* Изменяем fixed на absolute */
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    max-width: 600px;
+    /* box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.SendMessageForm input {
+    flex: 1;
+    /* Позволяет элементу расти и занимать все доступное пространство */
+    padding: 12px 18px;
+    border: 1px solid #ccc;
+    /* Цвет границы */
+    border-radius: 7px;
+    /* Скругление углов */
+    font-size: 24px;
+    /* Размер шрифта */
+    margin-right: 10px;
+    /* Отступ справа, чтобы отделить от кнопки */
+    outline: none;
+    /* Убираем стандартный контур при фокусе */
+
+    transition: border-color 0.3s ease;
+    /* Плавный переход цвета границы */
+}
+
+/* Стиль для состояния фокуса */
+.SendMessageForm input:focus {
+    border-color: #007bff;
+    /* Цвет границы при фокусе */
+}
+
+.SendMessageForm button {
+    padding: 14px 20px;
+    border: none;
+    /* Убираем стандартные границы */
+    border-radius: 7px;
+    /* Скругленные углы */
+    background-color: #4182c9;
+    /* Синий фон */
+    color: #fff;
+    /* Белый текст */
+    font-size: 20px;
+    cursor: pointer;
+    /* Стиль курсора при наведении */
+    transition: background-color 0.3s ease;
+    /* Плавный переход для цвета фона */
+    outline: none;
+    /* Убираем стандартный контур при фокусе */
+}
+
+/* Стиль для состояния при наведении */
+.SendMessageForm button:hover {
+    background-color: #2d71b9;
+    /* Темнее синий при наведении */
+}
+
+/* Стиль для состояния активации (когда кнопка нажата) */
+.SendMessageForm button:active {
+    background-color: #20558a;
+    /* Еще темнее синий при нажатии */
+}
+
+/* Стиль для состояния фокуса (обычно для клавиатурного управления) */
+.SendMessageForm button:focus {
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+    /* Добавляем синий контур вокруг кнопки */
+}
+
+
+
+
+.UserProfile {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    margin: 20px 5px;
+}
+
+.UserAvatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.UserName {
+    font-size: 16px;
+    font-weight: bold;
+}
